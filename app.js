@@ -9,13 +9,15 @@ const app = new Koa()
 const router = new Router()
 
 router.get('/random', ctx => {
-    ctx.body = randomGenerator(ctx.query.min, ctx.query.max)
+    const minParam = parseInt(ctx.query.min)
+    const maxParam = parseInt(ctx.query.max)
+    ctx.body = randomGenerator(minParam, maxParam)
 })
 
 app.use(Logger())
     .use(router.routes())
     .listen(3000)
 
-const randomGenerator = (min = 0, max = Number.MAX_SAFE_INTEGER) => {
-    return Math.floor(Math.random() * (max - min + 1) + min)
+const randomGenerator = (min , max ) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min
 }
