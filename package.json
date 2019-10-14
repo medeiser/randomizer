@@ -1,0 +1,33 @@
+{
+  "name": "randomizer",
+  "version": "1.0.0",
+  "description": "API that returns an integer value in a specific range",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medeiser/randomizer.git"
+  },
+  "keywords": [
+    "nodejs",
+    "koajs"
+  ],
+  "author": "medeiser",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.10.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  },
+  "bugs": {
+    "url": "https://github.com/medeiser/randomizer/issues"
+  },
+  "homepage": "https://github.com/medeiser/randomizer#readme"
+}
